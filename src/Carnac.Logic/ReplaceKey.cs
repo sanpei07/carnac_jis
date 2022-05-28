@@ -8,28 +8,39 @@ namespace Carnac.Logic
     {
         static readonly Dictionary<Keys, string> ShiftReplacements = new Dictionary<Keys, string>
         {
-            {Keys.D0, ")"},
+            //{Keys.D0, ")"},
+            {Keys.D0, ""},
             {Keys.D1, "!"},
-            {Keys.D2, "@"},
+            //{Keys.D2, "@"},
+            {Keys.D2, "\""},
             {Keys.D3, "#"},
             {Keys.D4, "$"},
             {Keys.D5, "%"},
-            {Keys.D6, "^"},
-            {Keys.D7, "&"},
-            {Keys.D8, "*"},
-            {Keys.D9, "("},
+            //{Keys.D6, "^"},
+            {Keys.D6, "&"},
+            //{Keys.D7, "&"},
+            {Keys.D7, "'"},
+            //{Keys.D8, "*"},
+            {Keys.D8, "("},
+            //{Keys.D9, "("},
+            {Keys.D9, ")"},
             {Keys.OemOpenBrackets, "{"},
             {Keys.Oem6, "}"},
-            {Keys.OemMinus, "_"},
+            //{Keys.OemMinus, "_"},
+            {Keys.OemMinus, "="},
             {Keys.Oemplus, "+"},
-            {Keys.OemBackslash, "|"},
+            //{Keys.OemBackslash, "|"},
+            {Keys.OemBackslash, "_"},
             {Keys.Oem5, "|"},
             {Keys.OemQuestion, "?"},
             {Keys.OemPeriod, ">"},
             {Keys.Oemcomma, "<"},
-            {Keys.Oem1, ":"},
-            {Keys.Oem7, "\""},
-            {Keys.Oemtilde, "~"},
+            //{Keys.Oem1, ":"},
+            {Keys.Oem1, "*"},
+            //{Keys.Oem7, "\""},
+            {Keys.Oem7, "~"},
+            //{Keys.Oemtilde, "~"},
+            {Keys.Oemtilde, "`"},
             {Keys.Insert, "ins"},
             {Keys.Delete, "del"}
         };
@@ -60,15 +71,19 @@ namespace Carnac.Logic
             {Keys.OemOpenBrackets, "["},
             {Keys.Oem6, "]"},
             {Keys.OemMinus, "-"},
-            {Keys.Oemplus, "="},
+            //{Keys.Oemplus, "="},
+            {Keys.Oemplus, ";"},
             {Keys.Oem5, "\\"},
             {Keys.OemBackslash, "\\"},
             {Keys.OemQuestion, "/"},
             {Keys.OemPeriod, "."},
             {Keys.Oemcomma, ","},
-            {Keys.Oem1, ";"},
-            {Keys.Oem7, "'"},
-            {Keys.Oemtilde, "`"},
+            //{Keys.Oem1, ";"},
+            {Keys.Oem1, ":"},
+            //{Keys.Oem7, "'"},
+            {Keys.Oem7, "^"},
+            //{Keys.Oemtilde, "`"},
+            {Keys.Oemtilde, "@"},
             {Keys.Decimal, "."},
             {Keys.Divide, " / "},
             {Keys.Multiply, " * "},
@@ -78,6 +93,7 @@ namespace Carnac.Logic
             {Keys.RShiftKey, "Shift"},
             {Keys.LWin, "Win"},
             {Keys.RWin, "Win"},
+            
         };
 
         public static Keys? ToKey(string keyText)
@@ -96,6 +112,7 @@ namespace Carnac.Logic
                 if (replacement.Value.Equals(keyText, StringComparison.CurrentCultureIgnoreCase))
                     return replacement.Key;
             }
+            
             return null;
         }
 
