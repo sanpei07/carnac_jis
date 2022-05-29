@@ -130,10 +130,13 @@ namespace Carnac.Logic
 
         KeyPress ToCarnacKeyPress(InterceptKeyEventArgs interceptKeyEventArgs)
         {
-
-            player = new System.Media.SoundPlayer(Properties.Resource1.keypress1);
-            player.Play();
-
+            if (settings.KeySound)
+            {
+                player = new System.Media.SoundPlayer(Properties.Resource1.keypress1);
+                player.Play();
+            }
+            
+            
             var process = AssociatedProcessUtilities.GetAssociatedProcess();
             if (process == null)
             {
