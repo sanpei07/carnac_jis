@@ -70,5 +70,5 @@ If you are learning Rx and want to be shown through Carnac's codebase then this 
 |"|~|
 |~|`|
 |:|*|
-|||_|
+|\||_|
 
