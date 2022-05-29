@@ -29,9 +29,12 @@ namespace Carnac.Logic.Models
 
         [NotifyProperty(AlsoNotifyFor = new[] { "ScaleTransform", "Alignment" })]
         public NotificationPlacement Placement { get; set; }
-
+       
         [DefaultValue(false)]
         public bool AutoUpdate { get; set; }
+
+        [DefaultValue(false)]
+        public bool KeySound { get; set; }
 
         //Used to determine which from it's leftmost co-ord
         double left;

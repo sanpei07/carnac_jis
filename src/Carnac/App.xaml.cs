@@ -34,6 +34,7 @@ namespace Carnac
             messageProvider = new MessageProvider(new ShortcutProvider(), keyProvider, settings);
         }
 
+
         protected override void OnStartup(StartupEventArgs e)
         {
             ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
